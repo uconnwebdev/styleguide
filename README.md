@@ -20,4 +20,10 @@ This will be a lot of links, and pull quotes. An ongoing colection of the very b
 2. [A List Apart](http://alistapart.com/topics)
 3. Joe Clark's [Accessibility Articles](http://joeclark.org/access/webaccess/)
 
+### Markdown
+
+We'll be writing this in Markdown, which is a text format that looks clean, butwill output HTML for us. In the end, we'll release this HTML in an actual website.
+
+[Markdown Reference](http://daringfireball.net/projects/markdown/basics)
+
 
