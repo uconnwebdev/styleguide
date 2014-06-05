@@ -18,6 +18,6 @@ This will be a lot of links, and pull quotes. An ongoing colection of the very b
 
 1. Jakon Neilen's [AlertBox](http://www.nngroup.com/articles/)
 2. [A List Apart](http://alistapart.com/topics)
-3. Joe Clark's (Accessibility Articles][http://joeclark.org/access/webaccess/)
+3. Joe Clark's [Accessibility Articles](http://joeclark.org/access/webaccess/)
 
 
