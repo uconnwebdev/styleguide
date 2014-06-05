@@ -26,4 +26,10 @@ We'll be writing this in Markdown, which is a text format that looks clean, butw
 
 [Markdown Reference](http://daringfireball.net/projects/markdown/basics)
 
+#### Creating a Markdown File
+
+Use any basic text editor like TextEdit, Notepad, Sublime, or Dreamweaver, and save it with the extension '.md'. 
+
+Once you commit the file(s) to Github, you'll see it converted to HTML. 
+
 
