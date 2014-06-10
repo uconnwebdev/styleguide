@@ -113,10 +113,63 @@ This refers to the coding applied to a text document to change it into an HTML, 
 ######Meta Data
 Meta data is the data contained in the header that offers information about the web page that a visitor is currently on. The information contained in the meta data isn’t viewable on the web page (except in the source code). Meta data is contained within meta tags.
 
+######Meta Tag
+A meta tag is an HTML tag used to include meta data within the header of your web page.
 
+#####N
 
+######Navigation
+Navigation refers to the system that allows visitors to a website to move around that site. 
 
+#####O
 
+######Open Source
+Open source refers to the source code of a computer program being made available to the general public.
+
+#####P
+
+#####Plug In
+A plug-in is a bit of third party code that extends the capabilities of a website. It’s most often used in conjunction with a CMS or blogging platform. 
+
+#####R
+
+#####Really Simple Syndication RSS
+XML format that allows content to be syndicated from one site to another. It’s most commonly used on blogs. RSS also allows visitors to subscribe to a blog or other site and receive updates via a feed reader.
+
+#####S
+
+######Script
+Generally refers to a portion of code on an HTML page that makes the page more dynamic and interactive. Scripts can be written in a variety of languages, including JavaScript.
+
+######Server-Side
+Server-side refers to scripts run on a web server, as opposed to in a user’s browser. 
+
+######SOAP
+Stands for Simple Object Access Protocol. It’s an XML-based protocol exchanging information across the internet to allow an application on one site to access an application or database on another site.
+
+#####T
+
+######Tag
+A tag is a set of markup characters that are used around an element to indicate its start and end. 
+
+######Template
+A template is a file used to create a consistent design across a website. Templates are often used in conjunction with a CMS and contain both structural information about how a site should be set up, but also stylistic information about how the site should look.
+
+#####U
+
+######URL
+Stands for Uniform Resource Locator. A site’s URL is its address, the item that specifies where on the Internet it can the found.
+
+######Usability
+Navigation, content, images, and any interactive elements easy to use, functioning the way they were intended, and that your intended target visitor will not need any special training in order to use your site.
+
+######W
+
+######Web Server 
+A web server is a computer that has software installed and networking capabilities that allow it to host web sites and pages and make them available to internet users located elsewhere. 
+
+######Web Standards
+Standards are specifications recommended by the World Wide Web Consortium for standardizing website design. The main purpose of web standards is to make it easier for both designers and those who create web browsers to make sites that will appear consistent across platforms.
 
 ####Resources:
 Smashing Magazine [Web Design Industry Jargon: Glossary and Resources](http://www.smashingmagazine.com/2009/05/21/web-design-industry-jargon-glossary-and-resources/).
