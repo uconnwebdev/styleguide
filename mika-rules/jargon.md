@@ -1,7 +1,7 @@
 Web Jargon
 ====================
 
-Commonly used web jargon throughout UConn websites. Resource Smashing Magazine. 
+Commonly used web jargon throughout UConn websites. [Resource Smashing Magazine.](http://www.smashingmagazine.com/2009/05/21/web-design-industry-jargon-glossary-and-resources/). 
 
 #####A
 
@@ -86,7 +86,41 @@ Stands for Hypertext Markup Language. It’s the primary language used to write 
 ######HTTP
 Stands for HyperText Transfer Protocol. HTTP is a set of rules for transferring hypertext requests between a web browser and a web server.
 
+######Hyperlink
+A Hyperlink is a link from one web page to anther. Generally highlighted. 
+
+######Hypertext
+Hypertext is any computer-based text that includes hyperlinks. 
+
+######I
+
+######Iframe
+Short for Inline Frame. An iframe is used to display one or more web pages within another normal web page (one that isn’t a frameset page).
+
+######Inline Style
+Elements with CSS written directly around the element it affects, instead of in a separate style sheet or header style.
+
+#####L
+
+######Landing Page
+A landing page is the page where a visitor first enters a website. 
+
+#####M
+
+######Markup
+This refers to the coding applied to a text document to change it into an HTML, XML, or other Markup Language document.
+
+######Meta Data
+Meta data is the data contained in the header that offers information about the web page that a visitor is currently on. The information contained in the meta data isn’t viewable on the web page (except in the source code). Meta data is contained within meta tags.
+
+
+
+
 
 
 ####Resources:
 Smashing Magazine [Web Design Industry Jargon: Glossary and Resources](http://www.smashingmagazine.com/2009/05/21/web-design-industry-jargon-glossary-and-resources/).
+
+
+
+*End*
