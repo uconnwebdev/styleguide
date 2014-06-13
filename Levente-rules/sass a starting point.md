@@ -3,7 +3,7 @@
 
 This guide will show you some super simple sass variables, imports, mixins and how to use them. After this guide you ought to be confident enough to Google for any other sass issue.
 
-Written by @freshwaterfish1
+Written by [Levente Nagy](https://github.com/freshwaterfish1)
 
 ##Variable
 
@@ -111,3 +111,70 @@ nav a {
   text-decoration: none;
 }
 ```
+##Partials
+
+**Partials** are sass files that start with and underscore to denote that they are partial files that aren't to be compiled into css files. For instance the file name could look like so:
+
+```
+_partial.scss
+```
+
+**Partials** are used with Imports which we will talk about in the next section.
+
+
+##Import
+
+**Imports** let you combine sass files together so when you compile your sass into css you get only one master file instead of having to do multiple css requests. All you need to perform a import is a partial css that you will sew into the "normal" non partial css file. So if we'd like to import _partial.scss
+
+ ```sass
+// _partial.scss
+
+html,
+body,
+ul,
+ol {
+   margin: 0;
+  padding: 0;
+}
+```
+
+into base.scss
+
+ ```sass
+/* base.scss */
+
+body {
+  font-size: 100% Helvetica, sans-serif;
+  background-color: #efefef;
+}
+```
+
+all we have to do is the following:
+
+ ```sass
+/* _partial.scss */
+
+@import 'reset';
+
+body {
+  font-size: 100% Helvetica, sans-serif;
+  background-color: #efefef;
+}
+```
+Oh, sass is smart so you don't need to bother adding in the .sass extendion on the partial file. It'll sort it out all by itself. Anyways the final css output looks like this:
+
+```css
+html, body, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #efefef;
+  font-size: 100% Helvetica, sans-serif;
+}
+```
+
+
+
+
