@@ -38,7 +38,7 @@ Would turn into this:
 	}
 ```
 
-And when compiled the css would look like this:
+And when compiled the CSS would look like this:
 
 ```css
 
@@ -51,7 +51,7 @@ And when compiled the css would look like this:
 
  ##Nesting
 
- The next thing you'll need to know about sass is how **nesting** works. Assuming you know css, it is up to you - as the coder to keep all your nested elements near each other in the css. However with sass you can have sass do all the heavy lifting for you. Lets say you have your nav, and want to define three things in it. Instead of doing the following css:
+ The next thing you'll need to know about sass is how **nesting** works. Assuming you know CSS, it is up to you - as the coder to keep all your nested elements near each other in the CSS. However with sass you can have sass do all the heavy lifting for you. Lets say you have your nav, and want to define three things in it. Instead of doing the following CSS:
 
  ```css
 nav ul {
@@ -91,7 +91,7 @@ nav {
 }
 ```
 
-And of course the sass would compile to the following css:
+And of course the sass would compile to the following CSS:
 
  ```css
 nav ul {
@@ -112,7 +112,7 @@ nav a {
 ```
 ##Partials
 
-**Partials** are sass files that start with and underscore to denote that they are partial files that aren't to be compiled into css files. For instance the file name could look like so:
+**Partials** are sass files that start with and underscore to denote that they are partial files that aren't to be compiled into CSS files. For instance the file name could look like so:
 
 ```
 _partial.scss
@@ -123,7 +123,7 @@ _partial.scss
 
 ##Import
 
-**Imports** let you combine sass files together so when you compile your sass into css you get only one master file instead of having to do multiple css requests. All you need to perform a **import** is a partial css that you will sew into the "normal" non partial css file. So if we'd like to **import** _partial.scss
+**Imports** let you combine sass files together so when you compile your sass into CSS you get only one master file instead of having to do multiple CSS requests. All you need to perform a **import** is a partial CSS that you will sew into the "normal" non partial CSS file. So if we'd like to **import** _partial.scss
 
  ```sass
 // _partial.scss
@@ -160,7 +160,7 @@ body {
   background-color: #efefef;
 }
 ```
-Oh, sass is smart so you don't need to bother adding in the .sass extension on the partial file. It'll sort it out all by itself. Anyways the final css output looks like this:
+Oh, sass is smart so you don't need to bother adding in the .sass extension on the partial file. It'll sort it out all by itself. Anyways the final CSS output looks like this:
 
 ```css
 html, body, ul, ol {
@@ -181,7 +181,7 @@ body {
  ```sass
 @mixin
 ```
-Now lets go ahead and name it "border-radius", since we will be using this mixin to adjust the css border-radius element.
+Now lets go ahead and name it "border-radius", since we will be using this mixin to adjust the CSS border-radius element.
 
  ```sass
 @mixin border-radius
@@ -216,7 +216,7 @@ Now all we got to do is use it in a class. To do this use "@include" and replace
 .box { @include border-radius(10px); }
 ```
 
-And this sass will compile out to the following css:
+And this sass will compile out to the following CSS:
 ```css
 .box {
   -webkit-border-radius: 10px;
@@ -227,7 +227,7 @@ And this sass will compile out to the following css:
 ```
 ##Extend/Inheritance
 
-"**@extend**" allows you to share share a set of CSS properties from one selector to another. Lets say you have a message box with the following css.
+"**@extend**" allows you to share share a set of CSS properties from one selector to another. Lets say you have a message box with the following CSS.
 
 ```css
 .message {
@@ -237,7 +237,7 @@ And this sass will compile out to the following css:
 }
 ```
 
-Now lets add in some types of messages for instance success, error, and warning. But since we are using sass we can keep our code pretty simple, just using @extend followed by the css class you'd like to use. 
+Now lets add in some types of messages for instance success, error, and warning. But since we are using sass we can keep our code pretty simple, just using @extend followed by the CSS class you'd like to use. 
 
 ```sass
 .message {
@@ -258,7 +258,7 @@ Now lets add in some types of messages for instance success, error, and warning.
   @extend .message;
 }
 ```
-From there we can just add in our modifications for each type of message:
+From there we can just add in our modifications to each type of message
 
 ```sass
 .message {
@@ -282,9 +282,9 @@ From there we can just add in our modifications for each type of message:
   border-color: yellow;
 }
 ```
-And as always our sass compiles into the following css:
+And as always our sass compiles into the following CSS
 
-```
+```css
 .message, .success, .error, .warning {
   border: 1px solid #cccccc;
   padding: 10px;
@@ -301,6 +301,42 @@ And as always our sass compiles into the following css:
 
 .warning {
   border-color: yellow;
+}
+```
+##Operators
+
+**Operators** lets you tap sass's power to do math in your CSS. Sass has a handful of standard math operators like +, -, *, /, and %. Sass-lang has a geat example of to use math in order to create a grid. 
+>We've created a very simple fluid grid, based on 960px. Operations in Sass let us do something like take pixel values and convert them to percentages without much hassle. 
+The sass of course looks like this:
+
+```sass
+.container { width: 100%; }
+
+article[role="main"] {
+  float: left;
+  width: 600px / 960px * 100%;
+}
+
+aside[role="complimentary"] {
+  float: right;
+  width: 300px / 960px * 100%;
+}
+```
+And of course the CSS will look like this:
+
+```css
+.container {
+  width: 100%;
+}
+
+article[role="main"] {
+  float: left;
+  width: 62.5%;
+}
+
+aside[role="complimentary"] {
+  float: right;
+  width: 31.25%;
 }
 ```
 
