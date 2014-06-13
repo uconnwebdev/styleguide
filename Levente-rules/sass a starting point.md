@@ -225,11 +225,84 @@ And this sass will compile out to the following css:
   border-radius: 10px;
 }
 ```
+##Extend/Inheritance
 
+"**@extend**" allows you to share share a set of CSS properties from one selector to another. Lets say you have a message box with the following css.
 
+```css
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+```
 
+Now lets add in some types of messages for instance success, error, and warning. But since we are using sass we can keep our code pretty simple, just using @extend followed by the css class you'd like to use. 
 
+```sass
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
 
+.success {
+  @extend .message;
+}
+
+.error {
+  @extend .message;
+}
+
+.warning {
+  @extend .message;
+}
+```
+From there we can just add in our modifications for each type of message:
+
+```sass
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+
+.error {
+  @extend .message;
+  border-color: red;
+}
+
+.warning {
+  @extend .message;
+  border-color: yellow;
+}
+```
+And as always our sass compiles into the following css:
+
+```
+.message, .success, .error, .warning {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+```
 
 ---
 ###References
