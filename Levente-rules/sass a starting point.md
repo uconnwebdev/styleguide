@@ -1,10 +1,13 @@
 #sass: Super Simple Stuff
+======================
 
-	This guide will show you some super simple sass variables, imports, mixins and how to use them. After this guide you ought to be confident enough to google for any other sass issue.
+This guide will show you some super simple sass variables, imports, mixins and how to use them. After this guide you ought to be confident enough to Google for any other sass issue.
+
+Written by @freshwaterfish1
 
 ##Variable
 
-Variables in sass are a name preceded by a $. For instance the variable hello would look like so.
+**Variables** in sass are a name preceded by a $. For instance the **variable** hello would look like so.
 
 ```sass
 	$hello
@@ -18,7 +21,7 @@ But thats pretty useless without some sort of value attached to it. So lets go a
 
 ```
 
-Brilliant, but now how do we use this in a class? Its simple - just replace whereever you use "#ff0000" with "$red". So this:
+Brilliant, but now how do we use this in a class? Its simple - just replace wherever you use "#ff0000" with "$red". So this:
 
 ```sass
 	.class {
@@ -45,9 +48,31 @@ And when compiled the css would look like this:
 	}
 ```
 
- This looks like more code in order to accomplish same thing - and you'd be right to think that. However lets say you have a site where you use #ff0000 a lot, instead of doing a find and replace across all your classes to change it to a darker red - you can just simply change the variable red to a darker hex value. 
+ This looks like more code in order to accomplish same thing - and you'd be right to think that. However lets say you have a site where you use #ff0000 a lot, instead of doing a find and replace across all your classes to change it to a darker red - you can just simply change the **variable** red to a darker hex value.
 
  ##Nesting
+
+ The next thing you'll need to know about sass is how **nesting** works. Assuming you know css, it is up to you - as the coder to keep all your nested elements near each other in the css. However with sass you can have sass do all the heavy lifting for you. Lets say you have your nav, and want to define three things in it. Instead of doing the following css:
+
+ ```css
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+```
+
+You can save yourself the trouble of all that by simply **nesting** them under the nav tag. The sass would look like this:
 
  ```sass
 nav {
@@ -64,5 +89,25 @@ nav {
     padding: 6px 12px;
     text-decoration: none;
   }
+}
+```
+
+And of course the sass would compile to the following css:
+
+ ```css
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
 }
 ```
