@@ -1,5 +1,4 @@
 #sass: Super Simple Stuff
-======================
 
 This guide will show you some super simple sass variables, imports, mixins and how to use them. After this guide you ought to be confident enough to Google for any other sass issue.
 
@@ -124,7 +123,7 @@ _partial.scss
 
 ##Import
 
-**Imports** let you combine sass files together so when you compile your sass into css you get only one master file instead of having to do multiple css requests. All you need to perform a import is a partial css that you will sew into the "normal" non partial css file. So if we'd like to import _partial.scss
+**Imports** let you combine sass files together so when you compile your sass into css you get only one master file instead of having to do multiple css requests. All you need to perform a **import** is a partial css that you will sew into the "normal" non partial css file. So if we'd like to **import** _partial.scss
 
  ```sass
 // _partial.scss
@@ -161,7 +160,7 @@ body {
   background-color: #efefef;
 }
 ```
-Oh, sass is smart so you don't need to bother adding in the .sass extendion on the partial file. It'll sort it out all by itself. Anyways the final css output looks like this:
+Oh, sass is smart so you don't need to bother adding in the .sass extension on the partial file. It'll sort it out all by itself. Anyways the final css output looks like this:
 
 ```css
 html, body, ul, ol {
@@ -175,6 +174,54 @@ body {
 }
 ```
 
+##Mixins
 
+**Mixins** lets you make groups of CSS declarations that you can reuse throughout your site. Since its horrible to have to retype every vendor prefix for all the types of "border-radius". Instead lets make it a **mixin**, which is compromised of sass elements we have mentioned earlier in this document. First off lets tell sass we are making a mixin.
 
+ ```sass
+@mixin
+```
+Now lets go ahead and name it "border-radius", since we will be using this mixin to adjust the css border-radius element.
 
+ ```sass
+@mixin border-radius
+```
+And now lets add in a variable so we can actually control the border-radius: 
+
+ ```sass
+@mixin border-radius($radius) {
+}
+```
+And then add in all the vendor prefixes:
+
+ ```sass
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+```
+
+Now all we got to do is use it in a class. To do this use "@include" and replace $radius with a value for the "border-radius":
+
+ ```sass
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { @include border-radius(10px); }
+```
+
+And this sass will compile out to the following css:
+```css
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+```
